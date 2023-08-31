@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Google Scholar</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" placeholder="Search" class="form-control" id="searchKeyword">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn" id="btnSearch">Search</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn" id="btnExport">Export to Excel</button>
+                    <button type="button" class="btn" id="btnSave">Save Articles</button>
+                    <button type="button" class="btn" id="btnDownload">Download pdf</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table text-white" width="100%">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Year</th>
+                            <th>Journal</th>
+                            <th>Citations</th>
+                            <th>Abstract</th>
+                            <th>Detail of Abstract</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Machine Learning</td>
+                            <td>ZH Zhou</td>
+                            <td>2021</td>
+                            <td>Book</td>
+                            <td>1696</td>
+                            <td>"...<b>Machine learning</b> addresses the question of how to build <b>computers</b> that 
+                                improve automatically through experience. It is one of today’s most 
+                                rapidly growing <b>technical fields</b>, lying at the intersection of <b>computer science</b> 
+                                and <b>statistics</b> , and at the <b>core of artificial intelligence</b> and 
+                                <b>data science</b>..."</td>
+                            <!-- <td>Machine Learning (ML) Alex, Zhou, Ollin Boer Bohan Some Slides</td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Machine Learning: Trends, Perspectives and Prospects</td>
+                            <td>MI Jordan, TM Mitchell</td>
+                            <td>2015</td>
+                            <td>Science</td>
+                            <td>6660</td>
+                            <td> "...Recent progress in <b>machine learning</b> has been driven both by 
+                                the <b>development</b> of <b>new learning algorithms</b> and <b>theory</b> and by the ongoing explosion 
+                                in the availability of <b>online data</b> and <b>low-cost computation</b>. The adoption of 
+                                <b>data-intensive machine-learning methods</b> can be found throughout <b>science</b>, <b>technology</b> 
+                                and <b>commerce</b>..."</td>
+                            <!-- <td>
+                                Despite practical challenges, we are hopeful that informeddiscussionsamongpolicy-makersandthe 
+                                public about data and the capabilities of machine learning, will lead to insightful designs of 
+                                programs and policies that can balance the goals of protecting privacy and ensuring fairness 
+                                with those of reaping the benefits to scientific research and to individual and public health. 
+                                Our commitments to privacy and fairness are evergreen, but our policy choices must adapt to 
+                                advance them, and support new tech- niques for deepening our knowledge. REFERENCES AND NOTES1. 
+                                M. De Choudhury, S. Counts, E. Horvitz, A. Hoff, in Proceedings of International Conference on 
+                                Weblogs and Social Media [Association for the Advancement of Artificial Intelligence (AAAI), 
+                                Palo Alto, CA, 2014]. 2. J. S. Brownstein, C. C. Freifeld, L. C. Madoff, N. Engl. J. Med. 360 , 
+                                2153 –2155 (2009). 3. G. Eysenbach, J. Med. Internet Res. 11, e11 (2009). 4. D. A. Broniatowski, 
+                                M. J. Paul, M. Dredze, PLOS ONE8, e83672 (2013). 5. A. Sadilek, H. Kautz, V. Silenzio, in 
+                                Proceedings of the Twenty-Sixth AAAI Conference on Artificial Intelligence (AAAI, Palo Alto, CA, 
+                                2012). 6. M. De Choudhury, S. Counts, E. Horvitz, in Proceedings of the SIGCHI Conference on Human 
+                                Factors in Computing Systems (Association for Computing Machinery, New York, 2013), pp. 3267 –3276. 
+                                7. R. W. White, R. Harpaz, N. H. Shah, W. DuMouchel, E. Horvitz, Clin. Pharmacol. Ther. 96, 239 –246 
+                                (2014). 8. Samaritans Radar; www.samaritans.org/how-we-can-help-you/ 
+                                supporting-someone-online/samaritans-radar. 9. Shut down Samaritans Radar; http://bit.ly/Samaritans-after. 
+                                10. U.S. Equal Employment Opportunity Commission (EEOC), 29 Code of Federal Regulations (C.F.R.), 1630.2 
+                                (g) (2013). 11. EEOC, 29 CFR 1635.3 (c) (2013). 12. M. A. Rothstein, J. Law Med. Ethics36, 837 –840 (2008). 
+                                13. Executive Office of the President, Big Data: Seizing Opportunities, Preserving Values (White House, 
+                                Washington, DC, 2014); http://1.usa.gov/1TSOhiG. 14. Letter from Maneesha Mithal, FTC, to Reed Freeman, 
+                                Morrison, & Foerster LLP, Counsel for Netflix, 2 [closing letter] (2010); http://1.usa.gov/1GCFyXR. 15. 
+                                In re Facebook, Complaint, FTC File No. 092 3184 (2012). 16. FTC Staff Report, Mobile Privacy Disclosures: 
+                                Building Trust Through Transparency (FTC,Washington,DC,2013);http://1.usa.gov/1eNz8zr. 17. FTC, Protecting 
+                                Consumer Privacy in an Era of Rapid Change: Recommendations for Businesses and Policymakers (FTC, Washington, 
+                                DC, 2012). 18. Directive 95/46/ec of the European Parliament and of The Council of Europe, 24 October 1995. 
+                                19. L. Sweeney, Online ads roll the dice [blog]; http://1.usa.gov/ 1KgEcYg. 20. FTC, “Big data: A tool for 
+                                inclusion or exclusion? ”(workshop, FTC, Washington, DC, 2014); http://1.usa.gov/1SR65cv 21. FTC, Data 
+                                Brokers: A Call for Transparency and Accountability (FTC, Washington, DC, 2014); http://1.usa.gov/1GCFoj5. 
+                                22. J. Podesta, “Big data and privacy: 1 year out ”[blog]; http://bit. ly/WHsePrivacy. 23. White House 
+                                Council of Economic Advisers, Big Data and Differential Pricing (White House, Washington, DC, 2015). 24. 
+                                Executive Office of the President, Big Data and Differential Processing (White House, Washington, DC, 2015 ); 
+                                http://1.usa.gov/1eNy7qR. 25. Executive Office of the President, Big Data: Seizing Opportunities, Preserving 
+                                Values (White House, Washington, DC, 2014); http://1.usa.gov/1TSOhiG. 26. President ’s Council of Advisors 
+                                on Science and Technology (PCAST), Big Data and Privacy: A Technological Perspective (White House, Washington, 
+                                DC, 2014); http://1.usa.gov/1C5ewNv. 27. European Commission, Proposal for a Regulation of the European 
+                                Parliament and of the Council on the Protection of Individuals with regard to the processing of personal 
+                                data and on the free movement of such data (General Data Protection Regulation), COM(2012) 11 final (2012); 
+                                http://bit.ly/1Lu5POv. 28. M. Schrems v.Facebook Ireland Limited , §J. Unlawful data transmission to the U.S.A. 
+                                ( “PRISM ”), ¶166 and 167 (2013); www.europe-v-facebook.org/sk/sk_en.pdf. 10.1126/science.aac4520 REVIEW Machine 
+                                learning: Trends, perspectives, and prospects M. I. Jordan 1* and T. M. Mitchell 2* Machine learning addresses 
+                                the question of how to build computers that improve automatically through experience. It is one of today ’s most 
+                                rapidly growing technical fields, lying at the intersection of computer science and statistics, and at the core 
+                                of artificial intelligence and data science. Recent progress in machine learning has been driven both by the 
+                                development of new learning algorithms and theory and by the ongoing explosion in the availability of online 
+                                data and low-cost computation. The adoption of data-intensive machine-learning methods can be found throughout 
+                                science, technology and commerce, leading to more evidence-based decision-making across many walks of life, 
+                                including health care, manufacturing, education, financial modeling, policing, and marketing. M achine learning 
+                                is a discipline focused on two interrelated questions: How can one construct computer systems that auto- matically 
+                                improve through experience? and What are the fundamental statistical- computational-information-theoretic laws 
+                                that govern all learning systems, including computers, humans, and organizations? The study of machine learning 
+                                is important both for addressing these fundamental scientific and engineering ques- tions and for the highly 
+                                practical computer soft- wareithasproducedandfieldedacrossmany applications. Machine learning has progressed 
+                                dramati- cally over the past two decades, from laboratory curiosity to a practical technology in widespread 
+                                commercial use. Within artificial intelligence (AI), machine learning has emerged as the method of choice for 
+                                developing practical software for computer vision, speech recognition, natural lan- guage processing, robot 
+                                control, and other ap- plications. Many developers of AI systems now recognize that, for many applications, 
+                                it can be far easier to train a system by showing it exam- ples of desired input-output behavior than to 
+                                program it manually by anticipating the desired response for all possible inputs. The effect of ma- chine 
+                                learning has also been felt broadly across computer science and across a range of indus- tries concerned 
+                                with data-intensive issues, such as consumer services, the diagnosis of faults in complex systems, and 
+                                the control of logistics chains.
+                            </td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Machine Learning Algorithms-a review</td>
+                            <td>B Mahesh</td>
+                            <td>2020</td>
+                            <td>International Journal of Science and Research (IJSR)</td>
+                            <td>1599</td>
+                            <td>"...Here is a quick look at some of the commonly used
+                                <b>algorithms</b> in <b>machine learning (ML)</b>. <b>Supervised learning</b>
+                                is the machine learning task of learning a <b>function</b>..."</td>
+                            <!-- <td></td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Machine Learning</td>
+                            <td>TM Mitchell</td>
+                            <td>1997</td>
+                            <td>Book</td>
+                            <td>802</td>
+                            <td>"...Let us begin our study of <b>machine learning</b>
+                                by considerning a few learning tasks. For the purpose of this book we
+                                will define learning broadly to include any <b>computer program</b> that..."</td>
+                            <!-- <td></td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>What is Machine Learning?</td>
+                            <td>I EI Naqa, MJ Murphy</td>
+                            <td>2015</td>
+                            <td>Book</td>
+                            <td>911</td>
+                            <td>"...A <b>machine learning algorithm</b> is a 
+                                <b>computational process</b> that.... This training is the 
+                                <b>learning</b> part of machine learning. The ... can practice 
+                                <b>lifelong</b> learning as it processes <b>new data</b> and..."</td>
+                            <!-- <td></td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>Machine Learning</td>
+                            <td>E Alpaydin</td>
+                            <td>2021</td>
+                            <td>Book</td>
+                            <td>228</td>
+                            <td>"...A concise overview of <b>machine learning</b>
+                                --<b>computer programs</b> that learn from data--the basic of such
+                                applications as <b>voice recognition</b> and <b>driverless cars</b>.
+                                Today, <b>machine learning</b>..."</td>
+                            <!-- <td>
+                                3/1/16 1 http:// xkcd.com /894/ Neural Networks David Kauchak CS30 Spring 
+                                2016 Machine Learning is… Machine learning, a branch of artificial intelligence, 
+                                concerns the construction and study of systems that can learn from data. 
+                                Machine Learning is… Machine learning is programming computers to optimize a 
+                                performance criterion using example data or past experience .
+                            </td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>Machine Learning Basics</td>
+                            <td>H Wang, Z Lei, X Zhang, B Zhou, J Peng</td>
+                            <td>2016</td>
+                            <td>Deep Learning</td>
+                            <td>1638</td>
+                            <td>"...To obtain <b>theoretical</b> guarantees about 
+                                generalizations of a <b>machine learning algorithm</b>, we ... 
+                                Why does deep learning have different behavior than other machine 
+                                learning methods for..."</td>
+                            <!-- <td></td>    
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>What is Machine Learning? A primer for the epidemiologist</td>
+                            <td>Q Bi, KE Goodman, J Kaminsky...</td>
+                            <td>2019</td>
+                            <td>American Journal of Epidemiology</td>
+                            <td>341</td>
+                            <td>"...We provide a brief introduction to 5 common 
+                                <b>machine learning</b> ... of machine learning <b>techniques</b> 
+                                in the published <b>literature</b>. We recommen appraoches to 
+                                incoorporate meachine learning..."</td>
+                            <!-- <td></td>
+                            <td></td> -->
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td>A guide to Machine Learning for biologists</td>
+                            <td>JG Greener, SM Kandathil, L Moffat...</td>
+                            <td>2022</td>
+                            <td>Nature Reviews Molecular Cell Biology</td>
+                            <td>493</td>
+                            <td>"...A <b>machine learning</b> task is an objective s
+                                specification for what we want a machine learning model to accomplish.
+                                 For example, for an experiment investigation the expression 
+                                 of genes..."</td>
+                            <!-- <td>
+                                1 A guide to machine learning for biologists Joe G. Greener* Dept of Computer Science, 
+                                University College London, Gower Street, London WC1E 6BT, United Kingdom j.greener@ucl.ac.uk 
+                                Shaun M. Kandathil* Dept of Computer Science, University College London, Gower Street, 
+                                London WC1E 6BT, United Kingdom s.kandathil@ucl.ac.uk Lewis Moffat Dept of Computer Science, 
+                                University College London, Gower Street, London WC1E 6BT, United Kingdom lewis.moffat@cs.ucl.ac.uk 
+                                David T. Jones † Dept of Computer Science , University College London, Gower Street, London WC1E 
+                                6BT, United Kingdom d.t.jones@ucl.ac.uk * These authors contributed equally † Correspondence 
+                                should be addressed to: d.t.jones@ucl.ac.uk The expanding scale and inherent complexity of 
+                                biological data have encouraged a growing use of machine learning in biology to build informative 
+                                and predictive models of the underlying biological processes.
+                            </td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td>On Applied Research in Machine Learning</td>
+                            <td>F Provost, R Kohavi</td>
+                            <td>1998</td>
+                            <td>Book</td>
+                            <td>300</td>
+                            <td>"...Much of the <b>science</b> of <b>machine learning</b> 
+                                is a ... er learning research, that misclassi cation error have equal costs. 
+                                The vast majority of <b>classi er learning</b> research in <b>Machine Learning</b>..."</td>
+                            <!-- <td>
+                                Machine Learning, vv, 1{6 (1998) c 1998 Kluwer Academic Publishers, Boston. Manufactured in 
+                                    the Netherlands. On Applied Research inMachine Learning FOSTER PROVOST foster@nynexst.com 
+                                    Bel l Atlantic Science and Technology 400 Westchester Avenue, White Plains, New York 10604 
+                                    RON KOHAVI ronnyk@sgi.com Data Mining and Visualization, Silicon Graphics Inc. 2011 N. 
+                                    Shoreline Blvd, Mountain View, CA. 94043 Common arguments forincluding applications pap 
+                                    ersinthe Machine Learning literature are often based on thepap ers' value for advertising 
+                                    success storiesand for morale b o osting. Forexample, high-prole applications canhelp 
+                                    tosecure funding for future research and can help to attract high calib er students. 
+                                    However, there is another reason why such pap ers are of value to the eld, which is, 
+                                    arguably, even more vital. Application pap ers are essentialin order for Machine Learning 
+                                    to remain a viable science. They fo cus research on imp ortant unsolved problems that currently 
+                                    restrict the practical applicability of machine learning metho ds. Much of the \science" of 
+                                    Machine Learning is a science of engineering. 1By this we mean that it is dedicated to creating 
+                                    and compiling veriable knowledge related to the design and construction of artifacts. 
+                                    The scientic knowledge comprises the- oretical arguments, observational categorizations, 
+                                    empirical studies, and practical demonstrations. The artifacts are computer programs that 
+                                    use data to build mo d- els that arepractically ortheoretically useful.Because theob jects 
+                                    ofstudy are intended to have practical utility, it is essential for research activities to b 
+                                    e fo cused (in part) on the elimination of obstacles that imp ede their practical application. 
+                                    Most oftenthese obstacles taketheform of restrictive simplifying assumptions commonly made in 
+                                    research. Consider as an example the assumption, common in classier learning research, that 
+                                    misclassication errors have equal costs.
+                            </td>
+                            <td>
+                                <button class="btn">Pull</button>
+                            </td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
